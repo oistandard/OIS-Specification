@@ -1,11 +1,8 @@
-# OIS-Specification
-# Open In-Store Standard (OIS)
+# The Open In-Store Standard Specification
+**Retail & Commerce Media – Industry Initiative**
 <img width="400" height="400" alt="OIS Logo" src="https://github.com/user-attachments/assets/1a8e606c-d617-461d-aa36-7179ae5a5485" />
 
-**Retail & Commerce Media – Industry Initiative**
-
 ## Introducing OIS
-
 ### The Open In-Store Standard
 
 In-store retail and commerce media is entering a period of rapid growth. Screens, sensors, retail media networks, and AI-driven commerce experiences are expanding faster than the technical foundations that support them.
