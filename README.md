@@ -1,5 +1,6 @@
 # OIS-Specification
 # Open In-Store Standard (OIS)
+<img width="400" height="400" alt="OIS Logo" src="https://github.com/user-attachments/assets/1a8e606c-d617-461d-aa36-7179ae5a5485" />
 
 **Retail & Commerce Media – Industry Initiative**
 
