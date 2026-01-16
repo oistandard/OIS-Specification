@@ -20,25 +20,21 @@ This standard will usher in the age of **In-Store Infrastructure as a Service (I
 The individuals guiding the formation of the OIS initiative, defining its initial scope, and coordinating early working groups:
 
 * **Chris Foster** — EVP Product & Technology, DEEL Media
-* To be determined
-* To be determined
-* To be determined
+* More to come. Should it be you?
 
 ## Founding Members
 
 Organizations formally participating in the development of the OIS standard.
 
-* To be determined
-* To be determined
-* To be determined
+<img width="100" height="22" alt="deel_brandcolor_twoinchwide" src="https://github.com/user-attachments/assets/3c94dca5-8e6c-4737-a17d-2317f2ef4262" />
+
+* More to come. Should your organization support this effort?
 
 ## Supporting Organizations
 
 Organizations supporting the OIS initiative and its mission to establish open standards for in-store digital signage as a service.
 
-* To be determined
-* To be determined
-* To be determined
+* To be determined.
 
 > Logos displayed for identification only. Participation does not imply endorsement of any specific product or commercial service.
 
