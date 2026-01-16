@@ -121,7 +121,7 @@ OIS-Display will standardize:
 * Supported creative, media, and experience formats
 * Physical placement and merchandising context (store, aisle, department, category)
 * Screen state, health, availability, and control interfaces
-T* his layer establishes the foundation for treating in-store screens as structured, addressable media inventory.
+This layer establishes the foundation for treating in-store screens as structured, addressable media inventory.
 
 
 ## OIS-Media
@@ -227,3 +227,30 @@ OIS-Commerce will standardize:
 * Transaction-adjacent data exchanges
 
 OIS-Commerce establishes the foundation for closed-loop measurement and media-driven in-store commerce experiences.
+
+## Repository Layout
+
+This repository mirrors the OpenAPI Specification layout where it is helpful for a standards project.
+
+* `versions/` contains the current draft spec in Markdown.
+* `proposals/` captures future changes and work-in-progress ideas.
+* `tests/` provides payload fixtures used for validation and tooling.
+* `scripts/` contains build, validation, and tooling scripts (as they are added).
+* `examples/` includes JSON payload stubs for each OIS layer.
+* `.github/` holds repo configuration and templates.
+
+## Versions
+
+Drafts live in `versions/`. The first working draft is `versions/0.1.0.md`.
+
+## Examples
+
+JSON payload stubs live in `examples/` and are referenced by the draft spec.
+
+## Participation
+
+Please review `CONTRIBUTING.md` and `GOVERNANCE.md` before opening issues or PRs.
+
+## License
+
+See `LICENSE`.
