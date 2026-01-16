@@ -20,7 +20,7 @@ Include:
 
 ## Style
 
-Follow `style-guide.md` for editorial conventions.
+Follow `STYLE_GUIDE.md` for editorial conventions.
 
 ## Licensing
 

@@ -10,5 +10,5 @@
 ## JSON examples
 
 * All examples should be valid JSON.
-* Use snake_case for keys unless otherwise required.
+* Use camelCase for keys unless otherwise required.
 * Include minimal, realistic fields with explicit units.
