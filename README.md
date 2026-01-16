@@ -120,7 +120,7 @@ OIS-Display will standardize:
 * Supported creative, media, and experience formats
 * Physical placement and merchandising context (store, aisle, department, category)
 * Screen state, health, availability, and control interfaces
-T* his layer establishes the foundation for treating in-store screens as structured, addressable media inventory.
+This layer establishes the foundation for treating in-store screens as structured, addressable media inventory.
 
 
 ## OIS-Media
