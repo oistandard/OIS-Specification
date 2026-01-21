@@ -12,4 +12,5 @@ Layer schemas:
 * `schemas/ois-sense/sensor-event.schema.json`
 * `schemas/ois-location/store-layout.schema.json`
 * `schemas/ois-events/realtime-event.schema.json`
-* `schemas/ois-commerce/transaction-attribution.schema.json`
+
+OIS-Commerce schema is pending finalization.

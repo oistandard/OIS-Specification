@@ -8,11 +8,15 @@
 
 In-store retail and commerce media is entering a period of rapid growth. Screens, sensors, retail media networks, and AI-driven commerce experiences are expanding faster than the technical foundations that support them.
 
-Today, most in-store integrations remain proprietary, custom, and vendor-locked — requiring costly, one-off engineering efforts between digital signage platforms/providers and SSPs, DSPs, retailers, and measurement providers. This fragmentation is limiting scale, slowing innovation, limiting competition, and preventing physical retail from operating like a modern, interoperable media environment.
+Today, most in-store integrations remain proprietary, custom, and vendor-locked — requiring costly, one-off engineering efforts between digital signage and sensor providers and the platforms that activate, measure, and optimize media. This fragmentation limits scale, slows innovation, and prevents physical retail from operating like a modern, interoperable media environment.
 
-To address this, a cross-industry initiative is being formed to establish **OIS — the Open In-Store Standard.**
+To address this, a cross-industry initiative is being formed to establish **OIS — the Open In-Store Standard**, a single API standard with optional layer implementation.
 
-This standard will usher in the age of **In-Store Infrastructure as a Service (IIaaS)**, incorporating digital signage, sensors, and emerging physical devices and services for the in-store retail and commerce media ecosystem.
+OIS defines:
+
+* A provider-to-service ingest interface for inventory, signals, and measurement.
+* A service-to-provider delivery interface for media, configuration, and orchestration.
+* Canonical payload schemas and discovery metadata for interoperable integration.
 
 
 ## Founding Technical Steering Committee Members
@@ -83,6 +87,32 @@ These layers are intended to establish a common, interoperable contract between 
 Each layer defines standardized APIs, data schemas, and operational behaviors to enable consistent discovery, activation, delivery, measurement, and contextualization of in-store media across heterogeneous signage infrastructures.
 
 The following layers represent the initial scope of the OIS initiative and are provided as a foundation for industry collaboration, refinement, and formal specification.
+
+## Provider and Service Roles
+
+OIS is a single API standard with optional layer implementations. A Provider
+may implement only the layers that match its capabilities (for example, a
+sensor company may only implement OIS-Sense), while the Service/Platform side
+ingests provider data and delivers media, configuration, or signals back to
+providers. Each layer includes role-specific guidance for:
+
+* Provider to Service (ingest)
+* Service to Provider (delivery)
+
+## Endpoints and Examples
+
+This is a quick-start summary. Canonical endpoint documentation lives in
+`endpoints/`, and payloads live in `examples/`.
+
+| Layer | Direction | Endpoint | Example |
+| --- | --- | --- | --- |
+| OIS-Display | Provider to Service | `POST /display/screens` | `examples/ois-display/screen-inventory.json` |
+| OIS-Media | Service to Provider | `POST /media/deliveries` | `examples/ois-media/media-delivery.json` |
+| OIS-Proof-of-Play | Provider to Service | `POST /proof-of-play/events` | `examples/ois-proof-of-play/playback-event.json` |
+| OIS-Sense | Provider to Service | `POST /sense/events` | `examples/ois-sense/sensor-event.json` |
+| OIS-Location | Provider to Service | `POST /location/stores` | `examples/ois-location/store-layout.json` |
+| OIS-Events | Provider to Service | `POST /events` | `examples/ois-events/realtime-event.json` |
+| OIS-Commerce | Provider to Service | `POST /commerce/attribution` | `examples/ois-commerce/transaction-attribution.json` |
 
 
 ## OIS-Core
@@ -228,6 +258,10 @@ OIS-Commerce establishes the foundation for closed-loop measurement and media-dr
 This repository mirrors the OpenAPI Specification layout where it is helpful for a standards project.
 
 * `versions/` contains the current draft spec in Markdown.
+* `layers/` holds role-specific guidance for each OIS layer.
+* `endpoints/` lists canonical endpoints by layer and direction.
+* `use-cases/` contains end-to-end flows with example payloads.
+* `profiles/` documents implementation profiles by provider type.
 * `proposals/` captures future changes and work-in-progress ideas.
 * `tests/` provides payload fixtures used for validation and tooling.
 * `scripts/` contains build, validation, and tooling scripts (as they are added).
@@ -240,7 +274,23 @@ Drafts live in `versions/`. The first working draft is `versions/0.1.0.md`.
 
 ## Examples
 
-JSON payload stubs live in `examples/` and are referenced by the draft spec.
+JSON payload stubs live in `examples/` and are referenced by the draft spec and
+the endpoint catalog.
+
+## Endpoints
+
+Canonical endpoint documentation is in `endpoints/`, organized by layer and
+direction.
+
+## Use Cases
+
+End-to-end flows live in `use-cases/` and demonstrate how providers and
+services exchange data across layers.
+
+## Profiles
+
+Implementation profiles live in `profiles/` to clarify which layers are
+expected for different provider types.
 
 ## Participation
 

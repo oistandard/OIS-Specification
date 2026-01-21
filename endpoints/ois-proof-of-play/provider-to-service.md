@@ -1,0 +1,29 @@
+# OIS-Proof-of-Play Provider to Service
+
+## Playback events
+
+* `POST /proof-of-play/events` - submit proof-of-play events.
+
+Example payload (`examples/ois-proof-of-play/playback-event.json`):
+
+```json
+[
+  {
+    "eventType": "proof-of-play",
+    "mediaId": "cmp-934883",
+    "screenId": "store-00421-aisle7-endcap-1",
+    "playedAt": "2026-01-06T14:22:09Z",
+    "durationSeconds": 15,
+    "result": "completed",
+    "sessionId": "pop-77ab1290",
+    "deviceState": {
+      "temperature": "normal",
+      "connectivity": "online"
+    },
+    "audit": {
+      "signature": "MEYCIQDQ…",
+      "source": "signage-player"
+    }
+  }
+]
+```

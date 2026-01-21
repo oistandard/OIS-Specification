@@ -9,5 +9,4 @@ This folder contains JSON payload stubs for each OIS layer.
 * `ois-sense/sensor-event.json`
 * `ois-location/store-layout.json`
 * `ois-events/realtime-event.json`
-* `ois-commerce/transaction-attribution_OPT_1.json`
-* `ois-commerce/transaction-attribution_OPT_2.json`
+* `ois-commerce/transaction-attribution.json`
