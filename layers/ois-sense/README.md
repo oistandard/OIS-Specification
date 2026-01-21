@@ -6,12 +6,16 @@ Sensor and engagement signals for in-store environments.
 
 ## Provider to Service (Ingest)
 
-* Emit sensor events, engagement metrics, and privacy indicators.
+* Return sensor events, engagement metrics, and privacy indicators.
 * Include confidence and anonymization metadata.
 
 ## Service to Provider (Delivery)
 
-* Provide sensor configuration and enablement signals.
+* Not defined for OIS-Sense.
+
+## Optional
+
+* Provide a sensor inventory by store.
 
 ## Examples
 

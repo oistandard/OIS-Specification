@@ -6,12 +6,11 @@ Real-time signals and state updates for live orchestration.
 
 ## Provider to Service (Ingest)
 
-* Emit screen state, playback updates, and sensor streams.
-* Publish operational events for monitoring.
+* Stream screen state, playback updates, and sensor events over WSS.
 
 ## Service to Provider (Delivery)
 
-* Deliver real-time orchestration or trigger signals.
+* Not defined for OIS-Events.
 
 ## Examples
 

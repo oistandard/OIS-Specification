@@ -6,8 +6,7 @@ Media lifecycle, ingestion, and delivery across signage networks.
 
 ## Provider to Service (Ingest)
 
-* Report device readiness and media capability constraints.
-* Provide delivery acknowledgements and runtime signals.
+* Not defined for OIS-Media.
 
 ## Service to Provider (Delivery)
 

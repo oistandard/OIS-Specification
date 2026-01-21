@@ -106,12 +106,13 @@ This is a quick-start summary. Canonical endpoint documentation lives in
 
 | Layer | Direction | Endpoint | Example |
 | --- | --- | --- | --- |
-| OIS-Display | Provider to Service | `POST /display/screens` | `examples/ois-display/screen-inventory.json` |
+| OIS-Display | Provider to Service | `POST /display/screens/query` | `examples/ois-display/screen-inventory.json` |
 | OIS-Media | Service to Provider | `POST /media/deliveries` | `examples/ois-media/media-delivery.json` |
-| OIS-Proof-of-Play | Provider to Service | `POST /proof-of-play/events` | `examples/ois-proof-of-play/playback-event.json` |
-| OIS-Sense | Provider to Service | `POST /sense/events` | `examples/ois-sense/sensor-event.json` |
-| OIS-Location | Provider to Service | `POST /location/stores` | `examples/ois-location/store-layout.json` |
-| OIS-Events | Provider to Service | `POST /events` | `examples/ois-events/realtime-event.json` |
+| OIS-Proof-of-Play | Provider to Service | `POST /proof-of-play/events/query` | `examples/ois-proof-of-play/playback-event.json` |
+| OIS-Sense | Provider to Service | `POST /sense/events/query` | `examples/ois-sense/sensor-event.json` |
+| OIS-Location | Provider to Service | `GET /location/stores` | `examples/ois-location/store-layout.json` |
+| OIS-Events | Provider to Service | `WSS /events` | `examples/ois-events/realtime-event.json` |
+| OIS-Commerce | Service to Provider | `POST /commerce/sales` | `examples/ois-commerce/service-sales.json` |
 | OIS-Commerce | Provider to Service | `POST /commerce/attribution` | `examples/ois-commerce/transaction-attribution.json` |
 
 

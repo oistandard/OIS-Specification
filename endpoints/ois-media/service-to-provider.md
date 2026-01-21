@@ -4,6 +4,13 @@
 
 * `POST /media/deliveries` - deliver media packages and playback instructions.
 
+Request parameters:
+
+* `storeId` (string, required)
+* `screenId` (string, optional)
+* `deviceId` (string, optional, for audio or non-screen devices)
+* `deviceType` (string, optional, e.g., `audio-player`)
+
 Example payload (`examples/ois-media/media-delivery.json`):
 
 ```json

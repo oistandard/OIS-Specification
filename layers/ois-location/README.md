@@ -6,12 +6,11 @@ Store layout, zone hierarchy, and placement context.
 
 ## Provider to Service (Ingest)
 
-* Publish store layouts, zone metadata, and screen placement.
-* Update changes to zones or screen relationships.
+* Return store layouts, zone metadata, and screen placement.
 
 ## Service to Provider (Delivery)
 
-* Provide targeting constraints or layout selection guidance.
+* Update store layouts, zones, and screen placement.
 
 ## Examples
 

@@ -1,10 +1,28 @@
 # OIS-Proof-of-Play Provider to Service
 
-## Playback events
+## Playback event query
 
-* `POST /proof-of-play/events` - submit proof-of-play events.
+* `POST /proof-of-play/events/query` - retrieve proof-of-play events by store or screen.
 
-Example payload (`examples/ois-proof-of-play/playback-event.json`):
+Request parameters:
+
+* `storeId` (string, optional)
+* `storeIds` (array, optional)
+* `screenId` (string, optional)
+* `startAt` (string, date-time, optional)
+* `endAt` (string, date-time, optional)
+
+Example request:
+
+```json
+{
+  "storeId": "store-00421",
+  "startAt": "2026-01-06T00:00:00Z",
+  "endAt": "2026-01-06T23:59:59Z"
+}
+```
+
+Example response (`examples/ois-proof-of-play/playback-event.json`):
 
 ```json
 [

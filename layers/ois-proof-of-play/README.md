@@ -6,12 +6,12 @@ Playback confirmation, compliance, and audit data.
 
 ## Provider to Service (Ingest)
 
-* Emit proof-of-play events and compliance records.
+* Return proof-of-play events by store or screen.
 * Include audit signatures and device state.
 
 ## Service to Provider (Delivery)
 
-* Provide reconciliation guidance and dispute workflows.
+* Not defined for OIS-Proof-of-Play.
 
 ## Examples
 

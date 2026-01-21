@@ -6,12 +6,12 @@ Commerce attribution and outcome signaling.
 
 ## Provider to Service (Ingest)
 
-* Emit media-to-transaction attribution events.
+* Return media-to-transaction attribution events.
 * Provide confidence scores and interaction metadata.
 
 ## Service to Provider (Delivery)
 
-* Provide offer, promotion, or activation guidance.
+* Deliver sales data by store.
 
 ## Examples
 

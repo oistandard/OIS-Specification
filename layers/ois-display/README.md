@@ -6,12 +6,11 @@ Screen and inventory definition for in-store display assets.
 
 ## Provider to Service (Ingest)
 
-* Register screens, zones, capabilities, and availability.
-* Update screen state and operational health.
+* Return screen inventory by store.
 
 ## Service to Provider (Delivery)
 
-* Request or confirm inventory activation and configuration.
+* Not defined for OIS-Display.
 
 ## Examples
 

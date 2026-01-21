@@ -1,16 +1,3 @@
-# OIS-Commerce Service to Provider
-
-## Sales data delivery
-
-* `POST /commerce/sales` - deliver sales data by store.
-
-Request parameters:
-
-* `storeId` (string, required)
-
-Example payload (`examples/ois-commerce/service-sales.json`):
-
-```json
 {
   "storeId": "store-00421",
   "salesWindow": {
@@ -33,4 +20,3 @@ Example payload (`examples/ois-commerce/service-sales.json`):
     }
   ]
 }
-```

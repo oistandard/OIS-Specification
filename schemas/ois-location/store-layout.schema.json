@@ -40,6 +40,23 @@
       "screens": {
         "type": "array",
         "items": { "type": "string" }
+      },
+      "devices": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["deviceId", "deviceType", "zoneId", "status"],
+          "properties": {
+            "deviceId": { "type": "string" },
+            "deviceType": {
+              "type": "string",
+              "enum": ["audio-player", "vision-sensor", "proximity-sensor"]
+            },
+            "zoneId": { "type": "string" },
+            "status": { "type": "string", "enum": ["active", "inactive"] }
+          }
+        }
       }
     }
   }

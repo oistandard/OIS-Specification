@@ -1,5 +1,6 @@
 # OIS-Proof-of-Play Service to Provider
 
-## Reconciliation
+## Not defined
 
-* `POST /proof-of-play/reconciliation` - send reconciliation guidance.
+OIS-Proof-of-Play does not define Service to Provider endpoints. Proof-of-play
+data flows from Provider to Service.

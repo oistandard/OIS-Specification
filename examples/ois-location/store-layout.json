@@ -14,7 +14,21 @@
         "adjacentZones": ["snacks-aisle-6", "checkout-lane-1"]
       }
     ],
-    "screens": ["store-00421-aisle7-endcap-1"]
+    "screens": ["store-00421-aisle7-endcap-1"],
+    "devices": [
+      {
+        "deviceId": "aud-1140",
+        "deviceType": "audio-player",
+        "zoneId": "beverages-aisle-7",
+        "status": "active"
+      },
+      {
+        "deviceId": "sns-7712",
+        "deviceType": "vision-sensor",
+        "zoneId": "beverages-aisle-7",
+        "status": "active"
+      }
+    ]
   }
   
 ]

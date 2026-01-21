@@ -1,11 +1,23 @@
 # OIS-Display Provider to Service
 
-## Inventory ingest
+## Inventory query
 
-* `POST /display/screens` - register or update screens.
-* `PATCH /display/screens/{screenId}/state` - update screen state.
+* `POST /display/screens/query` - return screen inventory for one or more stores.
 
-Example payload (`examples/ois-display/screen-inventory.json`):
+Request parameters:
+
+* `storeId` (string, optional)
+* `storeIds` (array, optional)
+
+Example request:
+
+```json
+{
+  "storeIds": ["store-00421", "store-00918"]
+}
+```
+
+Example response (`examples/ois-display/screen-inventory.json`):
 
 ```json
 [

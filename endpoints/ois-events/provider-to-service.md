@@ -2,7 +2,7 @@
 
 ## Real-time events
 
-* `POST /events` - publish real-time events and state changes.
+* `WSS /events` - stream real-time events and state changes.
 
 Example payload (`examples/ois-events/realtime-event.json`):
 

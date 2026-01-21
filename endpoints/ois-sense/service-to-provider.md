@@ -1,5 +1,6 @@
 # OIS-Sense Service to Provider
 
-## Sensor configuration
+## Not defined
 
-* `POST /sense/configurations` - deliver sensor configuration and enablement.
+OIS-Sense does not define Service to Provider endpoints. Sense data flows from
+Provider to Service.

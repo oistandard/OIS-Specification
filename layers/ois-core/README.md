@@ -4,12 +4,12 @@
 
 Shared conventions and requirements across all OIS layers.
 
-## Provider to Service (Ingest)
+## Provider to Service (Connectivity)
 
 * Publish discovery metadata at `/.well-known/ois`.
 * Declare supported layers, auth requirements, and transport expectations.
 
-## Service to Provider (Delivery)
+## Service to Provider (Connectivity)
 
 * Provide authorization tokens or access configuration based on discovery.
 
