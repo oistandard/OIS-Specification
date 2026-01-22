@@ -1,5 +1,9 @@
 # OIS-Sense Provider to Service
 
+## Scope
+
+Sensor and engagement signals for in-store environments.
+
 ## Sensor event query
 
 * `POST /sense/events/query` - retrieve sensor events by store or screen.
@@ -22,7 +26,7 @@ Example request:
 }
 ```
 
-Example response (`examples/ois-sense/sensor-event.json`):
+Example response:
 
 ```json
 [
@@ -45,11 +49,64 @@ Example response (`examples/ois-sense/sensor-event.json`):
 ]
 ```
 
+Schema:
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ois.foundation/schemas/ois-sense/sensor-event.schema.json",
+  "title": "OIS Sense Sensor Event",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "sensorId",
+      "type",
+      "screenId",
+      "timestamp",
+      "metrics",
+      "confidence",
+      "privacy"
+    ],
+    "properties": {
+      "sensorId": { "type": "string" },
+      "type": {
+        "type": "string",
+        "enum": ["proximity-dwell", "motion", "engagement"]
+      },
+      "screenId": { "type": "string" },
+      "timestamp": { "type": "string", "format": "date-time" },
+      "metrics": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["presence", "dwellSeconds", "motionDetected"],
+        "properties": {
+          "presence": { "type": "boolean" },
+          "dwellSeconds": { "type": "number", "minimum": 0 },
+          "motionDetected": { "type": "boolean" }
+        }
+      },
+      "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+      "privacy": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["containsPII", "anonymized"],
+        "properties": {
+          "containsPII": { "type": "boolean" },
+          "anonymized": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
+```
+
 ## Device inventory (optional)
 
 * `GET /sense/devices` - retrieve sensors or other sensing devices by store.
 
-Example payload (`examples/ois-sense/device-inventory.json`):
+Example payload:
 
 ```json
 [

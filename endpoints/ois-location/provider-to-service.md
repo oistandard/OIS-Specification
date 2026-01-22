@@ -1,5 +1,9 @@
 # OIS-Location Provider to Service
 
+## Scope
+
+Store layout, zone hierarchy, and device placement context.
+
 ## Layout retrieval
 
 * `GET /location/stores` - retrieve store layouts, zones, and devices.
@@ -13,7 +17,7 @@ Query string examples:
 * `GET /location/stores?storeIds=store-00421,store-00918`
 * `GET /location/stores?storeIds=store-00421&storeIds=store-00918`
 
-Example response (`examples/ois-location/store-layout.json`):
+Example response:
 
 ```json
 [
@@ -49,4 +53,72 @@ Example response (`examples/ois-location/store-layout.json`):
     ]
   }
 ]
+```
+
+Schema:
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ois.foundation/schemas/ois-location/store-layout.schema.json",
+  "title": "OIS Location Store Layout",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["storeId", "brand", "address", "zones", "screens"],
+    "properties": {
+      "storeId": { "type": "string" },
+      "brand": { "type": "string" },
+      "address": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["city", "state", "country"],
+        "properties": {
+          "city": { "type": "string" },
+          "state": { "type": "string" },
+          "country": { "type": "string", "minLength": 2, "maxLength": 2 }
+        }
+      },
+      "zones": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["zoneId", "department", "adjacentZones"],
+          "properties": {
+            "zoneId": { "type": "string" },
+            "department": { "type": "string" },
+            "adjacentZones": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      },
+      "screens": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "devices": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["deviceId", "deviceType", "zoneId", "status"],
+          "properties": {
+            "deviceId": { "type": "string" },
+            "deviceType": {
+              "type": "string",
+              "enum": ["audio-player", "vision-sensor", "proximity-sensor"]
+            },
+            "zoneId": { "type": "string" },
+            "status": { "type": "string", "enum": ["active", "inactive"] }
+          }
+        }
+      }
+    }
+  }
+}
 ```

@@ -18,5 +18,7 @@ signals to the Service/Platform for reporting and optimization.
 
 ## Example payloads
 
-* `examples/ois-core/authentication.json`
-* `examples/ois-sense/sensor-event.json`
+See:
+
+* `endpoints/ois-core/provider-to-service.md`
+* `endpoints/ois-sense/provider-to-service.md`

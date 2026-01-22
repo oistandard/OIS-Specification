@@ -1,5 +1,9 @@
 # OIS-Core Service to Provider
 
+## Scope
+
+Authentication and token issuance for API access.
+
 ## Authentication
 
 * `POST /auth/token` - token issuance endpoint (referenced by discovery).

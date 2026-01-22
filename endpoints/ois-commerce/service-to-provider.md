@@ -1,5 +1,9 @@
 # OIS-Commerce Service to Provider
 
+## Scope
+
+Commerce attribution and outcome signaling.
+
 ## Sales data delivery
 
 * `POST /commerce/sales` - deliver sales data by store.
@@ -8,7 +12,7 @@ Request parameters:
 
 * `storeId` (string, required)
 
-Example payload (`examples/ois-commerce/service-sales.json`):
+Example payload:
 
 ```json
 {
@@ -32,5 +36,61 @@ Example payload (`examples/ois-commerce/service-sales.json`):
       }
     }
   ]
+}
+```
+
+Schema:
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ois.foundation/schemas/ois-commerce/service-sales.schema.json",
+  "title": "OIS Commerce Service Sales",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["storeId", "salesWindow", "currency", "totals"],
+  "properties": {
+    "storeId": { "type": "string" },
+    "salesWindow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["startAt", "endAt"],
+      "properties": {
+        "startAt": { "type": "string", "format": "date-time" },
+        "endAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "currency": { "type": "string", "minLength": 3, "maxLength": 3 },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grossSales", "transactionCount"],
+      "properties": {
+        "grossSales": { "type": "number", "minimum": 0 },
+        "transactionCount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "mediaAttributionContext": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["campaignId", "mediaId", "product"],
+        "properties": {
+          "campaignId": { "type": "string" },
+          "mediaId": { "type": "string" },
+          "product": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sku", "name"],
+            "properties": {
+              "sku": { "type": "string" },
+              "name": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 ```

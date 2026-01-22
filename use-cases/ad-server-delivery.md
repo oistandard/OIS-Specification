@@ -20,6 +20,8 @@ events for reporting.
 
 ## Example payloads
 
-* `examples/ois-core/authentication.json`
-* `examples/ois-media/media-delivery.json`
-* `examples/ois-proof-of-play/playback-event.json`
+See:
+
+* `endpoints/ois-core/provider-to-service.md`
+* `endpoints/ois-media/service-to-provider.md`
+* `endpoints/ois-proof-of-play/provider-to-service.md`

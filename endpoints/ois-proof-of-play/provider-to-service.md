@@ -1,5 +1,9 @@
 # OIS-Proof-of-Play Provider to Service
 
+## Scope
+
+Playback confirmation, compliance, and audit data.
+
 ## Playback event query
 
 * `POST /proof-of-play/events/query` - retrieve proof-of-play events by store or screen.
@@ -22,7 +26,7 @@ Example request:
 }
 ```
 
-Example response (`examples/ois-proof-of-play/playback-event.json`):
+Example response:
 
 ```json
 [
@@ -44,4 +48,63 @@ Example response (`examples/ois-proof-of-play/playback-event.json`):
     }
   }
 ]
+```
+
+Schema:
+
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ois.foundation/schemas/ois-proof-of-play/playback-event.schema.json",
+  "title": "OIS Proof-of-Play Playback Event",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "eventType",
+      "mediaId",
+      "screenId",
+      "playedAt",
+      "durationSeconds",
+      "result",
+      "sessionId",
+      "deviceState",
+      "audit"
+    ],
+    "properties": {
+      "eventType": { "type": "string", "enum": ["proof-of-play"] },
+      "mediaId": { "type": "string" },
+      "screenId": { "type": "string" },
+      "playedAt": { "type": "string", "format": "date-time" },
+      "durationSeconds": { "type": "integer", "minimum": 1 },
+      "result": {
+        "type": "string",
+        "enum": ["completed", "partial", "failed"]
+      },
+      "sessionId": { "type": "string" },
+      "deviceState": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["temperature", "connectivity"],
+        "properties": {
+          "temperature": { "type": "string" },
+          "connectivity": {
+            "type": "string",
+            "enum": ["online", "offline", "degraded"]
+          }
+        }
+      },
+      "audit": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["signature", "source"],
+        "properties": {
+          "signature": { "type": "string" },
+          "source": { "type": "string" }
+        }
+      }
+    }
+  }
+}
 ```

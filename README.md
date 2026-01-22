@@ -99,21 +99,21 @@ providers. Each layer includes role-specific guidance for:
 * Provider to Service (ingest)
 * Service to Provider (delivery)
 
-## Endpoints and Examples
+## Endpoints
 
 This is a quick-start summary. Canonical endpoint documentation lives in
-`endpoints/`, and payloads live in `examples/`.
+`endpoints/` and includes inline examples and schemas.
 
-| Layer | Direction | Endpoint | Example |
-| --- | --- | --- | --- |
-| OIS-Display | Provider to Service | `POST /display/screens/query` | `examples/ois-display/screen-inventory.json` |
-| OIS-Media | Service to Provider | `POST /media/deliveries` | `examples/ois-media/media-delivery.json` |
-| OIS-Proof-of-Play | Provider to Service | `POST /proof-of-play/events/query` | `examples/ois-proof-of-play/playback-event.json` |
-| OIS-Sense | Provider to Service | `POST /sense/events/query` | `examples/ois-sense/sensor-event.json` |
-| OIS-Location | Provider to Service | `GET /location/stores` | `examples/ois-location/store-layout.json` |
-| OIS-Events | Provider to Service | `WSS /events` | `examples/ois-events/realtime-event.json` |
-| OIS-Commerce | Service to Provider | `POST /commerce/sales` | `examples/ois-commerce/service-sales.json` |
-| OIS-Commerce | Provider to Service | `POST /commerce/attribution` | `examples/ois-commerce/transaction-attribution.json` |
+| Layer | Direction | Endpoint |
+| --- | --- | --- |
+| OIS-Display | Provider to Service | `POST /display/screens/query` |
+| OIS-Media | Service to Provider | `POST /media/deliveries` |
+| OIS-Proof-of-Play | Provider to Service | `POST /proof-of-play/events/query` |
+| OIS-Sense | Provider to Service | `POST /sense/events/query` |
+| OIS-Location | Provider to Service | `GET /location/stores` |
+| OIS-Events | Provider to Service | `WSS /events` |
+| OIS-Commerce | Service to Provider | `POST /commerce/sales` |
+| OIS-Commerce | Provider to Service | `POST /commerce/attribution` |
 
 
 ## OIS-Core
@@ -256,42 +256,30 @@ OIS-Commerce establishes the foundation for closed-loop measurement and media-dr
 
 ## Repository Layout
 
-This repository mirrors the OpenAPI Specification layout where it is helpful for a standards project.
+This repository contains the OIS specification, endpoint definitions, and
+example payloads.
 
 * `versions/` contains the current draft spec in Markdown.
-* `layers/` holds role-specific guidance for each OIS layer.
-* `endpoints/` lists canonical endpoints by layer and direction.
-* `use-cases/` contains end-to-end flows with example payloads.
-* `profiles/` documents implementation profiles by provider type.
+* `endpoints/` lists canonical endpoints, examples, and schemas.
+* `use-cases/` contains end-to-end flows with inline payloads.
 * `proposals/` captures future changes and work-in-progress ideas.
 * `tests/` provides payload fixtures used for validation and tooling.
 * `scripts/` contains build, validation, and tooling scripts (as they are added).
-* `examples/` includes JSON payload stubs for each OIS layer.
 * `.github/` holds repo configuration and templates.
 
 ## Versions
 
 Drafts live in `versions/`. The first working draft is `versions/0.1.0.md`.
 
-## Examples
-
-JSON payload stubs live in `examples/` and are referenced by the draft spec and
-the endpoint catalog.
-
-## Endpoints
+## Endpoint Documentation
 
 Canonical endpoint documentation is in `endpoints/`, organized by layer and
-direction.
+direction. Examples and schemas live inline with each endpoint.
 
 ## Use Cases
 
 End-to-end flows live in `use-cases/` and demonstrate how providers and
 services exchange data across layers.
-
-## Profiles
-
-Implementation profiles live in `profiles/` to clarify which layers are
-expected for different provider types.
 
 ## Participation
 
