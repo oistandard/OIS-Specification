@@ -1,11 +1,8 @@
 # The Open In-Store Standard Specification
 
-<img width="400" height="400" alt="OIS Logo" src="https://github.com/user-attachments/assets/1a8e606c-d617-461d-aa36-7179ae5a5485" />
+<img width="auto" height="200" alt="ois-brand" src="https://github.com/user-attachments/assets/fde9f442-7100-4797-b73d-3bc5fdcc6384" />
 
-**Retail & Commerce Media – Industry Initiative**
-## Introducing OIS
-### The Open In-Store Standard
-
+### Introducing OIS, a Retail & Commerce Media Industry Initiative
 In-store retail and commerce media is entering a period of rapid growth. Screens, sensors, retail media networks, and AI-driven commerce experiences are expanding faster than the technical foundations that support them.
 
 Today, most in-store integrations remain proprietary, custom, and vendor-locked — requiring costly, one-off engineering efforts between digital signage and sensor providers and the platforms that activate, measure, and optimize media. This fragmentation limits scale, slows innovation, and prevents physical retail from operating like a modern, interoperable media environment.
