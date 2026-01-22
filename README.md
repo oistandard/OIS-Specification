@@ -24,7 +24,7 @@ OIS defines:
 The individuals guiding the formation of the OIS initiative, defining its initial scope, and coordinating early working groups:
 
 * **Chris Foster** — EVP Product & Technology, DEEL Media
-* More to come. Should it be you?
+* More to come.
 
 ## Founding Members
 
@@ -32,7 +32,7 @@ Organizations formally participating in the development of the OIS standard.
 
 <img width="100" height="22" alt="deel_brandcolor_twoinchwide" src="https://github.com/user-attachments/assets/3c94dca5-8e6c-4737-a17d-2317f2ef4262" />
 
-* More to come. Should your organization support this effort?
+* More to come.
 
 ## Supporting Organizations
 
