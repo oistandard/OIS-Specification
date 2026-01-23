@@ -27,9 +27,7 @@ The individuals guiding the formation of the OIS initiative, defining its initia
 
 Organizations formally participating in the development of the OIS standard.
 
-<img width="100" height="22" alt="deel_brandcolor_twoinchwide" src="https://github.com/user-attachments/assets/3c94dca5-8e6c-4737-a17d-2317f2ef4262" />
-
-* More to come.
+* To be determined.
 
 ## Supporting Organizations
 
