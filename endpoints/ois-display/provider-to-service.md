@@ -10,8 +10,7 @@ Screen and inventory definition for in-store display assets.
 
 Request parameters:
 
-* `storeId` (string, optional)
-* `storeIds` (array, optional)
+* `storeIds` (array, required)
 
 Example request:
 
