@@ -47,31 +47,20 @@ OIS is intended to significantly reduce the technical complexity of deploying in
 
 By establishing common APIs, schemas, and operational contracts, OIS enables retail media networks, SSPs, DSPs, ad servers, analytics platforms, and commerce systems to integrate with in-store media environments without custom, vendor-specific development.
 
-## 2. Prevent Vendor Lock-In and Encourage Open Competition
-
-Most in-store retail media deployments today require proprietary, one-off integrations with individual digital signage providers.
-
-OIS decouples in-store retail media infrastructure from proprietary platform dependencies by providing a vendor-neutral interoperability layer. This allows retailers and retail media networks to adopt, replace, or operate across multiple digital signage service providers without re-architecting their media and data platforms.
-
-## 3. Make In-Store Screens a Native Extension of Retail Media Networks
+## 2. Make In-Store Screens a Native Extension of Retail Media Networks
 
 OIS positions in-store screens as standardized, addressable media inventory within existing retail media and advertising ecosystems.
 
 By aligning in-store screen definitions, delivery workflows, and measurement signals with established digital media paradigms, OIS enables physical screens to function as natural extensions of retail websites, apps, and on-site placements.
 
-This allows SSPs, DSPs, and ad servers to activate, manage, and measure in-store media using the same systems, workflows, and reporting models already in use.
+This allows Orchestration Systems, SSPs, DSPs, and Ad Servers to activate, manage, and measure in-store media using the same systems, workflows, and reporting models already in use.
 
-## 4. Future-Proof In-Store Media and Experience Infrastructure
+## 3. Future-Proof In-Store Media and Experience Infrastructure
 
 OIS is designed as an extensible standard that supports both current in-store retail media requirements and emerging technologies.
 
 Beyond screen-based media delivery, OIS provides a structured framework for integrating sensor systems, contextual data, real-time events, and future AI-driven retail and commerce experiences.
 
-## 5. Standardize In-Store Media Data and Data Flows
-
-At its core, OIS standardizes how in-store media systems expose inventory, deliver content, generate operational and measurement data, and exchange signals with external platforms.
-
-This establishes the foundation for true **Digital Signage as a Service** — where signage providers operate as interchangeable service endpoints within a broader media and commerce stack.
 
 # OIS Specification Layers
 
