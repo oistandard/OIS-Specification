@@ -20,20 +20,13 @@ OIS defines:
 
 The individuals guiding the formation of the OIS initiative, defining its initial scope, and coordinating early working groups:
 
-* **Chris Foster** — EVP Product & Technology, DEEL Media
-* More to come.
-
-## Founding Members
-
-Organizations formally participating in the development of the OIS standard.
-
-* To be determined.
+* TBD.
 
 ## Supporting Organizations
 
-Organizations supporting the OIS initiative and its mission to establish open standards for in-store digital signage as a service.
+Organizations supporting the OIS initiative by committing to the implementation and development of OIS where applicable for their service offering.
 
-* To be determined.
+* TBD.
 
 > Logos displayed for identification only. Participation does not imply endorsement of any specific product or commercial service.
 
@@ -47,7 +40,7 @@ OIS is intended to significantly reduce the technical complexity of deploying in
 
 By establishing common APIs, schemas, and operational contracts, OIS enables retail media networks, SSPs, DSPs, ad servers, analytics platforms, and commerce systems to integrate with in-store media environments without custom, vendor-specific development.
 
-## 2. Make In-Store Screens a Native Extension of Retail Media Networks
+## 2. Make In-Store Screens and Sensing Devices a Native Extension of Retail Media Networks
 
 OIS positions in-store screens as standardized, addressable media inventory within existing retail media and advertising ecosystems.
 
