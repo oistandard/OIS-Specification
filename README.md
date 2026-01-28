@@ -84,7 +84,8 @@ This is a quick-start summary. Canonical endpoint documentation lives in
 | Layer | Direction | Endpoint |
 | --- | --- | --- |
 | OIS-Display | Provider to Service | `POST /display/screens/query` |
-| OIS-Media | Service to Provider | `POST /media/deliveries` |
+| OIS-Media | Service to Provider | `POST /media/requests` |
+| OIS-Media | Provider to Service | `POST /media/deliveries` |
 | OIS-Proof-of-Play | Provider to Service | `POST /proof-of-play/events/query` |
 | OIS-Sense | Provider to Service | `POST /sense/events/query` |
 | OIS-Location | Provider to Service | `GET /location/stores` |

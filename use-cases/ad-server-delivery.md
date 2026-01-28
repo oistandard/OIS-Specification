@@ -2,20 +2,21 @@
 
 ## Summary
 
-An ad server delivers media to a signage Provider and receives proof-of-play
-events for reporting.
+An ad server submits a media request to a signage Provider and receives
+delivery instructions and proof-of-play events for reporting.
 
 ## Flow
 
 1. Provider exposes discovery at `/.well-known/ois`.
 2. Service retrieves supported layers and auth requirements.
-3. Service delivers media to Provider.
-4. Provider emits proof-of-play events back to Service.
+3. Service submits a media request to Provider.
+4. Provider responds with media deliveries.
+5. Provider emits proof-of-play events back to Service.
 
 ## Endpoints
 
 * `GET /.well-known/ois`
-* `POST /media/deliveries`
+* `POST /media/requests`
 * `POST /proof-of-play/events`
 
 ## Example payloads
