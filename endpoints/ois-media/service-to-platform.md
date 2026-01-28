@@ -1,36 +1,14 @@
-# OIS-Media Service to Provider
+# OIS-Media Service to Platform
 
 ## Scope
 
 Media lifecycle, ingestion, and delivery across signage networks.
 
-## Media request
+## Media delivery
 
-* `POST /media/requests` - originating Service submits display and location context to a Provider for media selection.
+* `POST /media/deliveries` - Service delivers media packages and playback instructions to the Platform.
 
-Request parameters:
-
-* `storeId` (string, required)
-* `screenId` (string, optional)
-* `deviceId` (string, optional, for audio or non-screen devices)
-* `deviceType` (string, optional, e.g., `audio-player`)
-* `zoneId` (string, optional)
-* `department` (string, optional)
-* `category` (string, optional)
-
-Example request:
-
-```json
-{
-  "storeId": "store-00421",
-  "screenId": "store-00421-aisle7-endcap-1",
-  "zoneId": "beverages-aisle-7",
-  "department": "Beverages",
-  "category": "Soft Drinks"
-}
-```
-
-Example response:
+Example payload:
 
 ```json
 [
@@ -57,29 +35,7 @@ Example response:
 ]
 ```
 
-Schema (request):
-
-```json
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://ois.foundation/schemas/ois-media/media-request.schema.json",
-  "title": "OIS Media Request",
-  "type": "object",
-  "additionalProperties": false,
-  "required": ["storeId"],
-  "properties": {
-    "storeId": { "type": "string" },
-    "screenId": { "type": "string" },
-    "deviceId": { "type": "string" },
-    "deviceType": { "type": "string" },
-    "zoneId": { "type": "string" },
-    "department": { "type": "string" },
-    "category": { "type": "string" }
-  }
-}
-```
-
-Schema (response):
+Schema:
 
 ```json
 {

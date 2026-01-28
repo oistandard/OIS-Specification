@@ -1,4 +1,4 @@
-# OIS-Display Provider to Service
+# OIS-Display Service to Platform
 
 ## Scope
 

@@ -1,4 +1,4 @@
-# OIS-Location Provider to Service
+# OIS-Location Service to Platform
 
 ## Scope
 

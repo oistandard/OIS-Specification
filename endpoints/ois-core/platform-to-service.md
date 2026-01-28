@@ -1,4 +1,4 @@
-# OIS-Core Service to Provider
+# OIS-Core Platform to Service
 
 ## Scope
 

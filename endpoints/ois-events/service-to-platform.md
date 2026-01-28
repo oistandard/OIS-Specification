@@ -1,4 +1,4 @@
-# OIS-Events Provider to Service
+# OIS-Events Service to Platform
 
 ## Scope
 

@@ -1,4 +1,4 @@
-# OIS-Sense Provider to Service
+# OIS-Sense Service to Platform
 
 ## Scope
 

@@ -1,4 +1,4 @@
-# OIS-Commerce Provider to Service
+# OIS-Commerce Service to Platform
 
 ## Scope
 

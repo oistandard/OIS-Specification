@@ -5,14 +5,14 @@
 ### Introducing OIS, a Retail & Commerce Media Industry Initiative
 In-store retail and commerce media is entering a period of rapid growth. Screens, sensors, retail media networks, and AI-driven commerce experiences are expanding faster than the technical foundations that support them.
 
-Today, most in-store integrations remain proprietary, custom, and vendor-locked — requiring costly, one-off engineering efforts between digital signage and sensor providers and the platforms that activate, measure, and optimize media. This fragmentation limits scale, slows innovation, and prevents physical retail from operating like a modern, interoperable media environment.
+Today, most in-store integrations remain proprietary, custom, and vendor-locked — requiring costly, one-off engineering efforts between digital signage and sensor services and the platforms that activate, measure, and optimize media. This fragmentation limits scale, slows innovation, and prevents physical retail from operating like a modern, interoperable media environment.
 
 To address this, a cross-industry initiative is being formed to establish **OIS — the Open In-Store Standard**, a single API standard with optional layer implementation.
 
 OIS defines:
 
-* A provider-to-service ingest interface for inventory, signals, and measurement.
-* A service-to-provider delivery interface for media, configuration, and orchestration.
+* A service-to-platform ingest interface for inventory, signals, and measurement.
+* A platform-to-service delivery interface for media, configuration, and orchestration.
 * Canonical payload schemas and discovery metadata for interoperable integration.
 
 
@@ -59,22 +59,22 @@ Beyond screen-based media delivery, OIS provides a structured framework for inte
 
 The OIS standard is structured into a set of specification layers. Each layer represents a defined functional domain within an in-store retail and commerce media ecosystem.
 
-These layers are intended to establish a common, interoperable contract between digital signage and sensor platforms (including CMS, player, and device networks) and in-house or third-party systems such as retail media networks, SSPs, DSPs, measurement providers, and commerce platforms.
+These layers are intended to establish a common, interoperable contract between digital signage and sensor services (including CMS, player, and device networks) and in-house or third-party systems such as retail media networks, SSPs, DSPs, measurement providers, and commerce platforms.
 
 Each layer defines standardized APIs, data schemas, and operational behaviors to enable consistent discovery, activation, delivery, measurement, and contextualization of in-store media across heterogeneous signage infrastructures.
 
 The following layers represent the initial scope of the OIS initiative and are provided as a foundation for industry collaboration, refinement, and formal specification.
 
-## Provider and Service Roles
+## Platform and Service Roles
 
-OIS is a single API standard with optional layer implementations. A Provider
+OIS is a single API standard with optional layer implementations. A Service
 may implement only the layers that match its capabilities (for example, a
-sensor company may only implement OIS-Sense), while the Service/Platform side
-ingests provider data and delivers media, configuration, or signals back to
-providers. Each layer includes role-specific guidance for:
+sensor company may only implement OIS-Sense), while the Platform side ingests
+service data and delivers media, configuration, or signals back to services.
+Each layer includes role-specific guidance for:
 
-* Provider to Service (ingest)
-* Service to Provider (delivery)
+* Service to Platform (ingest)
+* Platform to Service (delivery)
 
 ## Endpoints
 
@@ -83,15 +83,15 @@ This is a quick-start summary. Canonical endpoint documentation lives in
 
 | Layer | Direction | Endpoint |
 | --- | --- | --- |
-| OIS-Display | Provider to Service | `POST /display/screens/query` |
-| OIS-Media | Service to Provider | `POST /media/requests` |
-| OIS-Media | Provider to Service | `POST /media/deliveries` |
-| OIS-Proof-of-Play | Provider to Service | `POST /proof-of-play/events/query` |
-| OIS-Sense | Provider to Service | `POST /sense/events/query` |
-| OIS-Location | Provider to Service | `GET /location/stores` |
-| OIS-Events | Provider to Service | `WSS /events` |
-| OIS-Commerce | Service to Provider | `POST /commerce/sales` |
-| OIS-Commerce | Provider to Service | `POST /commerce/attribution` |
+| OIS-Display | Service to Platform | `POST /display/screens/query` |
+| OIS-Media | Platform to Service | `POST /media/requests` |
+| OIS-Media | Service to Platform | `POST /media/deliveries` |
+| OIS-Proof-of-Play | Service to Platform | `POST /proof-of-play/events/query` |
+| OIS-Sense | Service to Platform | `POST /sense/events/query` |
+| OIS-Location | Service to Platform | `GET /location/stores` |
+| OIS-Events | Service to Platform | `WSS /events` |
+| OIS-Commerce | Platform to Service | `POST /commerce/sales` |
+| OIS-Commerce | Service to Platform | `POST /commerce/attribution` |
 
 
 ## OIS-Core
@@ -116,7 +116,7 @@ OIS-Core serves as the normative foundation upon which all other OIS specificati
 
 OIS-Display defines how in-store digital display inventory is described, classified, and exposed by digital signage platforms for consumption by retail media systems and connected tools.
 
-This layer standardizes how signage providers publish screen-level metadata and capabilities so that in-house platforms, SSPs, DSPs, and activation systems can reliably discover, evaluate, and transact against in-store display inventory.
+This layer standardizes how signage services publish screen-level metadata and capabilities so that in-house platforms, SSPs, DSPs, and activation systems can reliably discover, evaluate, and transact against in-store display inventory.
 
 OIS-Display will standardize:
 
@@ -256,8 +256,8 @@ direction. Examples and schemas live inline with each endpoint.
 
 ## Use Cases
 
-End-to-end flows live in `use-cases/` and demonstrate how providers and
-services exchange data across layers.
+End-to-end flows live in `use-cases/` and demonstrate how services and
+platforms exchange data across layers.
 
 ## Participation
 
