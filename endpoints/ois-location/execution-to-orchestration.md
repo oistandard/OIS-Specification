@@ -1,19 +1,23 @@
-# OIS-Location Platform to Service
+# OIS-Location Execution to Orchestration
 
 ## Scope
 
 Store layout, zone hierarchy, and device placement context.
 
-## Location updates
+## Layout retrieval
 
-* `POST /location/stores` - update store layouts, zones, and devices.
+* `GET /location/stores` - retrieve store layouts, zones, and devices.
 
 Request parameters:
 
-* `storeId` (string, optional)
-* `storeIds` (array, optional)
+* `storeIds` (array, optional, query param; accepts one or many)
 
-Example payload:
+Query string examples:
+
+* `GET /location/stores?storeIds=store-00421,store-00918`
+* `GET /location/stores?storeIds=store-00421&storeIds=store-00918`
+
+Example response:
 
 ```json
 [

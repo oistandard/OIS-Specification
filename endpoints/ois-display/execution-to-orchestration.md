@@ -1,4 +1,4 @@
-# OIS-Display Service to Platform
+# OIS-Display Execution to Orchestration
 
 ## Scope
 

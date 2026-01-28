@@ -1,4 +1,4 @@
-# OIS-Commerce Service to Platform
+# OIS-Commerce Execution to Orchestration
 
 ## Scope
 

@@ -11,8 +11,8 @@ To address this, a cross-industry initiative is being formed to establish **OIS 
 
 OIS defines:
 
-* A service-to-platform ingest interface for inventory, signals, and measurement.
-* A platform-to-service delivery interface for media, configuration, and orchestration.
+* A execution-to-orchestration ingest interface for inventory, signals, and measurement.
+* A orchestration-to-execution delivery interface for media, configuration, and orchestration.
 * Canonical payload schemas and discovery metadata for interoperable integration.
 
 
@@ -32,7 +32,7 @@ Organizations supporting the OIS initiative by committing to the implementation 
 
 # Core Objectives of the OIS Standard
 
-The Open In-Store Standard (OIS) is being established to provide a common technical foundation for **In-Store Infrastructure as a Service (IIaaS)** in support of in-store retail and commerce media.
+The Open In-Store Standard (OIS) is being established to provide a common technical foundation for **In-Store Infrastructure as a Execution (IIaaS)** in support of in-store retail and commerce media.
 
 ## 1. Simplify In-Store Retail & Commerce Media Integration
 
@@ -65,16 +65,16 @@ Each layer defines standardized APIs, data schemas, and operational behaviors to
 
 The following layers represent the initial scope of the OIS initiative and are provided as a foundation for industry collaboration, refinement, and formal specification.
 
-## Platform and Service Roles
+## Orchestration and Execution Roles
 
-OIS is a single API standard with optional layer implementations. A Service
+OIS is a single API standard with optional layer implementations. A Execution
 may implement only the layers that match its capabilities (for example, a
-sensor company may only implement OIS-Sense), while the Platform side ingests
+sensor company may only implement OIS-Sense), while the Orchestration side ingests
 service data and delivers media, configuration, or signals back to services.
 Each layer includes role-specific guidance for:
 
-* Service to Platform (ingest)
-* Platform to Service (delivery)
+* Execution to Orchestration (ingest)
+* Orchestration to Execution (delivery)
 
 ## Endpoints
 
@@ -83,15 +83,15 @@ This is a quick-start summary. Canonical endpoint documentation lives in
 
 | Layer | Direction | Endpoint |
 | --- | --- | --- |
-| OIS-Display | Service to Platform | `POST /display/screens/query` |
-| OIS-Media | Platform to Service | `POST /media/requests` |
-| OIS-Media | Service to Platform | `POST /media/deliveries` |
-| OIS-Proof-of-Play | Service to Platform | `POST /proof-of-play/events/query` |
-| OIS-Sense | Service to Platform | `POST /sense/events/query` |
-| OIS-Location | Service to Platform | `GET /location/stores` |
-| OIS-Events | Service to Platform | `WSS /events` |
-| OIS-Commerce | Platform to Service | `POST /commerce/sales` |
-| OIS-Commerce | Service to Platform | `POST /commerce/attribution` |
+| OIS-Display | Execution to Orchestration | `POST /display/screens/query` |
+| OIS-Media | Orchestration to Execution | `POST /media/deliveries` |
+| OIS-Media | Execution to Orchestration | `POST /media/requests` |
+| OIS-Proof-of-Play | Execution to Orchestration | `POST /proof-of-play/events/query` |
+| OIS-Sense | Execution to Orchestration | `POST /sense/events/query` |
+| OIS-Location | Execution to Orchestration | `GET /location/stores` |
+| OIS-Events | Execution to Orchestration | `WSS /events` |
+| OIS-Commerce | Orchestration to Execution | `POST /commerce/sales` |
+| OIS-Commerce | Execution to Orchestration | `POST /commerce/attribution` |
 
 
 ## OIS-Core

@@ -1,4 +1,4 @@
-# OIS-Media Platform to Service
+# OIS-Media Execution to Orchestration
 
 ## Scope
 
@@ -6,7 +6,7 @@ Media lifecycle, ingestion, and delivery across signage networks.
 
 ## Media request
 
-* `POST /media/requests` - Platform submits display and location context to a Service for media selection.
+* `POST /media/requests` - Execution submits display and location context to the Orchestration for media selection.
 
 Request parameters:
 

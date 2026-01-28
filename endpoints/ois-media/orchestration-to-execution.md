@@ -1,4 +1,4 @@
-# OIS-Media Service to Platform
+# OIS-Media Orchestration to Execution
 
 ## Scope
 
@@ -6,7 +6,7 @@ Media lifecycle, ingestion, and delivery across signage networks.
 
 ## Media delivery
 
-* `POST /media/deliveries` - Service delivers media packages and playback instructions to the Platform.
+* `POST /media/deliveries` - Orchestration delivers media packages and playback instructions to the Execution.
 
 Example payload:
 

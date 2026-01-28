@@ -1,4 +1,4 @@
-# OIS-Core Platform to Service
+# OIS-Core Orchestration to Execution
 
 ## Scope
 

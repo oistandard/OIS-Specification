@@ -1,4 +1,4 @@
-# OIS-Proof-of-Play Service to Platform
+# OIS-Proof-of-Play Execution to Orchestration
 
 ## Scope
 

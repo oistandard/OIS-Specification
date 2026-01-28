@@ -1,4 +1,4 @@
-# OIS-Sense Service to Platform
+# OIS-Sense Execution to Orchestration
 
 ## Scope
 

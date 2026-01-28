@@ -1,4 +1,4 @@
-# OIS-Commerce Platform to Service
+# OIS-Commerce Orchestration to Execution
 
 ## Scope
 
@@ -45,7 +45,7 @@ Schema:
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://ois.foundation/schemas/ois-commerce/service-sales.schema.json",
-  "title": "OIS Commerce Service Sales",
+  "title": "OIS Commerce Execution Sales",
   "type": "object",
   "additionalProperties": false,
   "required": ["storeId", "salesWindow", "currency", "totals"],

@@ -1,15 +1,15 @@
-# Use Case: Sensor-Only Service
+# Use Case: Sensor-Only Execution
 
 ## Summary
 
-A sensor Service implements only OIS-Core and OIS-Sense, sending engagement
-signals to the Platform for reporting and optimization.
+A sensor Execution implements only OIS-Core and OIS-Sense, sending engagement
+signals to the Orchestration for reporting and optimization.
 
 ## Flow
 
-1. Service exposes discovery at `/.well-known/ois`.
-2. Platform validates supported layers (OIS-Core, OIS-Sense).
-3. Service emits sensor events to the Platform.
+1. Execution exposes discovery at `/.well-known/ois`.
+2. Orchestration validates supported layers (OIS-Core, OIS-Sense).
+3. Execution emits sensor events to the Orchestration.
 
 ## Endpoints
 
@@ -20,5 +20,5 @@ signals to the Platform for reporting and optimization.
 
 See:
 
-* `endpoints/ois-core/service-to-platform.md`
-* `endpoints/ois-sense/service-to-platform.md`
+* `endpoints/ois-core/execution-to-orchestration.md`
+* `endpoints/ois-sense/execution-to-orchestration.md`
