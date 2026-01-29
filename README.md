@@ -11,28 +11,48 @@ To address this, a cross-industry initiative is being formed to establish **OIS 
 
 OIS defines:
 
-* A execution-to-orchestration ingest interface for inventory, signals, and measurement.
-* A orchestration-to-execution delivery interface for media, configuration, and orchestration.
-* Canonical payload schemas and discovery metadata for interoperable integration.
+* An execution-to-orchestration ingest interface for inventory, signals, and measurement.
+* An orchestration-to-execution delivery interface for media, configuration, and orchestration.
+* Canonical payload schemas for interoperable integration.
 
+## Roles in OIS
 
-## Founding Technical Steering Committee Members
+OIS supports two roles with different responsibilities and data flows.
 
-The individuals guiding the formation of the OIS initiative, defining its initial scope, and coordinating early working groups:
+### Orchestration (Retail media platforms and ad tech systems)
 
-* TBD.
+What you implement:
 
-## Supporting Organizations
+* Media delivery: `POST /media/deliveries`
 
-Organizations supporting the OIS initiative by committing to the implementation and development of OIS where applicable for their service offering.
+What you consume:
 
-* TBD.
+* Media requests: `POST /media/requests`
+* Proof-of-play: `POST /proof-of-play/events/query`
+* Sense events: `POST /sense/events/query`
+* Location data: `GET /locations`
+* Device and display inventory: `POST /devices/query`
+* Events stream: `WSS /events`
 
-> Logos displayed for identification only. Participation does not imply endorsement of any specific product or commercial service.
+### Execution (Digital signage, sensors, in-store providers)
+
+What you implement:
+
+* Media requests: `POST /media/requests`
+* Proof-of-play: `POST /proof-of-play/events/query`
+* Sense events: `POST /sense/events/query`
+* Location data: `GET /locations`
+* Device and display inventory: `POST /devices/query`
+* Events stream: `WSS /events`
+
+What you consume:
+
+* Media deliveries: `POST /media/deliveries`
+* Location updates: `POST /locations`
 
 # Core Objectives of the OIS Standard
 
-The Open In-Store Standard (OIS) is being established to provide a common technical foundation for **In-Store Infrastructure as a Execution (IIaaS)** in support of in-store retail and commerce media.
+The Open In-Store Standard (OIS) is being established to provide a common technical foundation for **In-Store Execution as a Service (IEaaS)** in support of in-store retail and commerce media.
 
 ## 1. Simplify In-Store Retail & Commerce Media Integration
 
@@ -67,7 +87,7 @@ The following layers represent the initial scope of the OIS initiative and are p
 
 ## Orchestration and Execution Roles
 
-OIS is a single API standard with optional layer implementations. A Execution
+OIS is a single API standard with optional layer implementations. An Execution
 may implement only the layers that match its capabilities (for example, a
 sensor company may only implement OIS-Sense), while the Orchestration side ingests
 service data and delivers media, configuration, or signals back to services.
@@ -75,24 +95,6 @@ Each layer includes role-specific guidance for:
 
 * Execution to Orchestration (ingest)
 * Orchestration to Execution (delivery)
-
-## Endpoints
-
-This is a quick-start summary. Canonical endpoint documentation lives in
-`endpoints/` and includes inline examples and schemas.
-
-| Layer | Direction | Endpoint |
-| --- | --- | --- |
-| OIS-Display | Execution to Orchestration | `POST /display/screens/query` |
-| OIS-Media | Orchestration to Execution | `POST /media/deliveries` |
-| OIS-Media | Execution to Orchestration | `POST /media/requests` |
-| OIS-Proof-of-Play | Execution to Orchestration | `POST /proof-of-play/events/query` |
-| OIS-Sense | Execution to Orchestration | `POST /sense/events/query` |
-| OIS-Location | Execution to Orchestration | `GET /location/stores` |
-| OIS-Events | Execution to Orchestration | `WSS /events` |
-| OIS-Commerce | Orchestration to Execution | `POST /commerce/sales` |
-| OIS-Commerce | Execution to Orchestration | `POST /commerce/attribution` |
-
 
 ## OIS-Core
 ### Foundation Layer
@@ -104,21 +106,22 @@ OIS-Core will standardize:
 * API architectural patterns and transport requirements (e.g., HTTPS, WSS)
 * Authentication and authorization models
 * Canonical data schema conventions and object definitions
+* Alignment with OpenRTB 2.6 and AdCOM conventions where applicable
 * Security requirements and privacy controls
 * Versioning, compatibility, and deprecation policies
 * Compliance, validation, and certification requirements
 
 OIS-Core serves as the normative foundation upon which all other OIS specifications are built.
 
+## OIS-Device
+### Device Inventory Layer
 
-## OIS-Display
-### Screen and Inventory Definition Layer
+OIS-Device defines a device inventory interface aligned to the OpenRTB `Device`
+object and AdCOM device type enumerations. It captures hardware, OS, and network
+signals for media players, display surfaces, and sensing devices, including
+devices with multiple attached displays.
 
-OIS-Display defines how in-store digital display inventory is described, classified, and exposed by digital signage platforms for consumption by retail media systems and connected tools.
-
-This layer standardizes how signage services publish screen-level metadata and capabilities so that in-house platforms, SSPs, DSPs, and activation systems can reliably discover, evaluate, and transact against in-store display inventory.
-
-OIS-Display will standardize:
+OIS-Device will standardize:
 
 * Screen and surface classifications
 * Physical and logical attributes (orientation, resolution, aspect ratios, zones, surfaces)
@@ -214,55 +217,3 @@ OIS-Events will standardize:
 * Commerce and experience handshake events
 
 OIS-Events is intended to support operational observability, responsive content, and real-time retail experiences.
-
-
-## OIS-Commerce
-### Media-to-Transaction Bridge Layer
-
-OIS-Commerce defines standardized interfaces that connect in-store media activity to commerce and transaction systems.
-
-This layer enables in-store media to participate directly in commerce workflows, attribution modeling, and retail system integrations.
-
-OIS-Commerce will standardize:
-
-* POS and commerce system integration models
-* Offer, promotion, and product-context signaling
-* Attribution and outcome event schemas
-* Transaction-adjacent data exchanges
-
-OIS-Commerce establishes the foundation for closed-loop measurement and media-driven in-store commerce experiences.
-
-## Repository Layout
-
-This repository contains the OIS specification, endpoint definitions, and
-example payloads.
-
-* `versions/` contains the current draft spec in Markdown.
-* `endpoints/` lists canonical endpoints, examples, and schemas.
-* `use-cases/` contains end-to-end flows with inline payloads.
-* `proposals/` captures future changes and work-in-progress ideas.
-* `tests/` provides payload fixtures used for validation and tooling.
-* `scripts/` contains build, validation, and tooling scripts (as they are added).
-* `.github/` holds repo configuration and templates.
-
-## Versions
-
-Drafts live in `versions/`. The first working draft is `versions/0.1.0.md`.
-
-## Endpoint Documentation
-
-Canonical endpoint documentation is in `endpoints/`, organized by layer and
-direction. Examples and schemas live inline with each endpoint.
-
-## Use Cases
-
-End-to-end flows live in `use-cases/` and demonstrate how services and
-platforms exchange data across layers.
-
-## Participation
-
-Please review `CONTRIBUTING.md` and `GOVERNANCE.md` before opening issues or PRs.
-
-## License
-
-See `LICENSE`.
